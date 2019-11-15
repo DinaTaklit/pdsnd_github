@@ -58,11 +58,14 @@ A python script `bikeshare.py` is provided to answer the previous statistics. Th
 - washington.csv
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+The resources used to fulfill this project were the resources provided in the data science nanodegree program offered by [Udacity] and [stack overflow] to fix some faced issues.
+
 
 <!-- Start links -->
 [Visual Code]: <https://code.visualstudio.com/>
 [Sublime]: <https://www.sublimetext.com/>
 [Atom]: <https://atom.io/>
 [Motivate]: <https://www.motivateco.com/>
+[stack overflow]: <https://stackoverflow.com/>
+[Udacity]: <https://www.udacity.com/course/data-scientist-nanodegree--nd025>
 <!-- End links -->
