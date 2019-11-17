@@ -39,9 +39,10 @@ def get_filters():
     CITY_DATA = { 'c': 'chicago',
                   'n': 'new york city',
                   'w': 'washington'}
-
+    # Ask the user which city he wants to explore
     city = input("#1.Which city you want to explore: chicago[c], new york city[n] or washington[w]?\n")
-
+    
+    #Control the input entered by the user => repeat the process until the user inserts the right letter
     while(city not in ["c", "n", "w" ]):
         city = input("\nPlease, enter a valide letter: c,n or w:\n")
     city= CITY_DATA[city]
@@ -50,13 +51,15 @@ def get_filters():
     # TO DO: get user input for month (all, january, february, ... , june)
 
     month = input("\n#2.In which month you want to filter data: all, january, february ..., june:\n") 
-
+    
+    #Check if the user entered a valid month  => repeat the process until he enters a valid answer
     while month != 'all' and month not in months:
         month = input("Please enter a valide month from january ... june or all!\n")
-
+  
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
     day = input("\n#3.In which day you want to filter data: all, monday, tuesday ..., sunday:\n") 
 
+    #Check if the user entered a valid day of the week: select "all" weeks or a specific day => repeat the process until he enters a valid answer
     while day != 'all' and day not in days:
         day = input("Please enter a valide day from monday ... sunday or all!\n")
 
