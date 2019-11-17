@@ -53,9 +53,9 @@ To complete this project, the following software requirements apply:
 
 ### Files used
 A python script `bikeshare.py` is provided to answer the previous statistics. This script explores the data of the three(03) cities stored in those files:
-- chicago.csv
-- new_york_city.csv
-- washington.csv
+1.  chicago.csv
+2. new_york_city.csv
+3. washington.csv
 
 ### Credits
 The resources used to fulfill this project were the resources provided in the data science nanodegree program offered by [Udacity] and [stack overflow] to fix some faced issues.
