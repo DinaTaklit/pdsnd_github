@@ -3,7 +3,7 @@ import pandas as pd
 import os 
 #This function is used to convert seconds to weeks, days, hours, minutes and seconds. It should be installed using: conda install humanfriendly
 #Read more here https://stackoverflow.com/questions/775049/how-do-i-convert-seconds-to-hours-minutes-and-seconds/43261109#43261109
-from xximport format_timespan
+from humanfriendly import format_timespan
 
 #This function aims to clear the screen in every restart.
 cls = lambda: os.system('cls') 
