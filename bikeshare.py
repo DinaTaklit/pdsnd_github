@@ -20,7 +20,18 @@ months = ['january', 'february', 'march', 'april', 'may', 'june']
 #List of the days of the week to be used in the filter.
 days = ['monday','tuesday','wednesday','thursday','friday','saturday','sunday']
 ###############################################################
-
+def addBanner():
+    banner= '''
+            #########################################################
+            #                                                       #
+            #                Explore Us Bikeshare Data              #
+            #                      Using Python                     #
+            #                           &                           #
+            #                     Pandas Library                    #
+            #                                                       #
+            #########################################################
+    '''
+    print(banner)
 ########################## Get filters ########################
 def get_filters():
     """
@@ -246,8 +257,7 @@ def display_raw_data(df):
 def main():
     while True:
         cls()
-        print("################## Explore US BykeShare DATA############")
-        print('\nHello! Let\'s explore some US bikeshare data!\n')
+        addBanner()
         city, month, day = get_filters()
         df = load_data(city, month, day)
         time_stats(df)
