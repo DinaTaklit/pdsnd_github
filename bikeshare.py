@@ -3,7 +3,7 @@ import pandas as pd
 import os 
 #This function is used to convert seconds to weeks, days, hours, minutes and seconds. It should be installed using: conda install humanfriendly
 #Read more here https://stackoverflow.com/questions/775049/how-do-i-convert-seconds-to-hours-minutes-and-seconds/43261109#43261109
-from humanfriendly import format_timespan
+from xximport format_timespan
 
 #This function aims to clear the screen in every restart.
 cls = lambda: os.system('cls') 
@@ -131,8 +131,8 @@ def time_stats(df):
     # TO DO: display the most common day of week
 
     #Use the mode function to return the most common day of week
-    popular_day_of_week = df['day_of_week'].mode()[0]
-    print("\n\t#The most common day of week is: ", popular_day_of_week)
+    popular_day = df['day_of_week'].mode()[0]
+    print("\n\t#The most common day of week is: ", popular_day)
 
     # TO DO: display the most common start hour
 
