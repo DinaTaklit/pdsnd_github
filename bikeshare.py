@@ -115,13 +115,13 @@ def time_stats(df):
     #Use the mode function to return the common month for the month column
     popular_month = df['month'].mode()[0]
     #Get the name of the month
-    print("\n\t#The most common month is: ",months[popular_month - 1])
+    print("\n\t#The most common month is: ", months[popular_month - 1])
 
     # TO DO: display the most common day of week
 
     #Use the mode function to return the most common day of week
     popular_day_of_week = df['day_of_week'].mode()[0]
-    print("\n\t#The most common day of week is: ",popular_day_of_week)
+    print("\n\t#The most common day of week is: ", popular_day_of_week)
 
     # TO DO: display the most common start hour
 
@@ -130,7 +130,7 @@ def time_stats(df):
 
     # find the most popular hour using pandas mode function that return a common value for a given column
     popular_hour = df['hour'].mode()[0] 
-    print("\n\t#The most common hour is: ",popular_hour)
+    print("\n\t#The most common hour is: ", popular_hour)
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
@@ -145,15 +145,15 @@ def station_stats(df):
 
     # TO DO: display most commonly used start station
     popular_start_station = df['Start Station'].mode()[0]
-    print("\n\t#The most commonly start station is: ",popular_start_station)
+    print("\n\t#The most commonly start station is: ", popular_start_station)
 
     # TO DO: display most commonly used end station
     popular_end_station = df['End Station'].mode()[0]
-    print("\n\t#The most commonly end station is: ",popular_end_station)
+    print("\n\t#The most commonly end station is: ", popular_end_station)
 
     # TO DO: display most frequent combination of start station and end station trip
     popular_start_end_station = df[['Start Station','End Station']].mode()
-    print('\n\t#The most frequent combination of start station and end station trip is:\n   "{}" and "{}"'.format(popular_start_end_station['Start Station'][0],popular_start_end_station['End Station'][0]))
+    print('\n\t#The most frequent combination of start station and end station trip is:\n   "{}" and "{}"'.format(popular_start_end_station['Start Station'][0], popular_start_end_station['End Station'][0]))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
@@ -169,11 +169,11 @@ def trip_duration_stats(df):
 
     # TO DO: display total travel time
     total_travel_time = df['Trip Duration'].sum()
-    print("\n\t#The total travel time is: {} seconds:\n\t=> {}".format(total_travel_time,format_timespan(total_travel_time)))
+    print("\n\t#The total travel time is: {} seconds:\n\t=> {}".format(total_travel_time, format_timespan(total_travel_time)))
 
     # TO DO: display mean travel time
     mean_travel_time = df['Trip Duration'].mean()
-    print("\n\t#The total travel time is: {} seconds:\n\t=> {}".format(mean_travel_time,format_timespan(mean_travel_time)))
+    print("\n\t#The total travel time is: {} seconds:\n\t=> {}".format(mean_travel_time, format_timespan(mean_travel_time)))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
@@ -191,7 +191,7 @@ def user_stats(df):
     #Print value counts for each user type
     #to_string() here is used to remove the display of name and datatype
     user_types = df['User Type'].value_counts()
-    print("\t#The number of user types:\n\n",user_types.to_string())
+    print("\t#The number of user types:\n\n", user_types.to_string())
 
     # TO DO: Display counts of gender
 
@@ -201,7 +201,7 @@ def user_stats(df):
     #The column Gender is not provided for washington city. We can handle this by checking if this column exist in df or handle it via an exception. Here condition is used for the Birth Year the exception is used
     if ('Gender' in df.columns):
         count_gender = df['Gender'].value_counts()
-        print("\n\t#The number of genders:\n\n",count_gender.to_string())
+        print("\n\t#The number of genders:\n\n", count_gender.to_string())
     else: 
         print("\n\t#No information about the Gender is provided for this city!")
 
@@ -210,11 +210,11 @@ def user_stats(df):
     # Get the earliest year of birth: we use min for this and we wrrap it in an int because the type of the Birth Year is float
     try:
         earliest_year_of_bearth = int(df['Birth Year'].min())
-        print("\n\tThe earliest year of birth is:  ",earliest_year_of_bearth)
+        print("\n\tThe earliest year of birth is:  ", earliest_year_of_bearth)
 
         # Get the recent year of birth: the max function return the biggest year which means the recent year 
         recent_year_of_bearth = int(df['Birth Year'].max())
-        print("\n\tThe most recent year of birth is:  ",recent_year_of_bearth)
+        print("\n\tThe most recent year of birth is:  ", recent_year_of_bearth)
 
         # Get the common year of birth: this can be done use the mode function that return the most common value
         common_year_of_birth = int(df['Birth Year'].mode()[0])
