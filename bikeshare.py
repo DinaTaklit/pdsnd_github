@@ -1,6 +1,5 @@
 import time
 import pandas as pd
-import numpy as np
 import os 
 #This function is used to convert seconds to weeks, days, hours, minutes and seconds. It should be installed using: conda install humanfriendly
 #Read more here https://stackoverflow.com/questions/775049/how-do-i-convert-seconds-to-hours-minutes-and-seconds/43261109#43261109
